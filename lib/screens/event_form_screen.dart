@@ -121,7 +121,7 @@ class _EventFormScreenState extends State<EventFormScreen> {
                   labelText: 'Event Title',
                 ),
                 validator: (v) {
-                  if (v == null  v.trim().isEmpty) {
+                  if (v == null || v.trim().isEmpty) {
                     return 'Please enter an event title';
                   }
                   if (v.trim().length < 3) {
@@ -153,7 +153,7 @@ class _EventFormScreenState extends State<EventFormScreen> {
                 decoration: const InputDecoration(labelText: 'Organizer ID'),
                 keyboardType: TextInputType.number,
                 validator: (v) {
-                  if (v == null  v.trim().isEmpty) {
+                  if (v == null || v.trim().isEmpty) {
                     return 'Organizer ID is required';
                   }
                   if (int.tryParse(v.trim()) == null) {

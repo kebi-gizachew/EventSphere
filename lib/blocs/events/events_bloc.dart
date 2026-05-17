@@ -275,9 +275,9 @@ class EventsBloc extends Bloc<EventsEvent, EventsState> {
       result = result
           .where(
             (e) =>
-                e.title.toLowerCase().contains(q) 
-                e.location.toLowerCase().contains(q) 
-                e.organizerId.toString().contains(q) 
+                e.title.toLowerCase().contains(q) ||
+                e.location.toLowerCase().contains(q) ||
+                e.organizerId.toString().contains(q) ||
                 e.category.label.toLowerCase().contains(q),
           )
           .toList();
@@ -291,7 +291,7 @@ class EventsBloc extends Bloc<EventsEvent, EventsState> {
     String query,
   ) {
     if (all.isEmpty) return EventsStatus.empty;
-    if (filtered.isEmpty && (query.isNotEmpty  state.selectedCategory != null)) {
+    if (filtered.isEmpty && (query.isNotEmpty || state.selectedCategory != null)) {
       return EventsStatus.loaded;
     }
     return EventsStatus.loaded;
