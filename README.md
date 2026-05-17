@@ -30,10 +30,8 @@ Additional fields (category, date, location, banner) are generated deterministic
 - **Loading states** and graceful **error handling**
 - **Success/error Snackbars** for user feedback
 - **Favorite/bookmark** toggle per event
-- **Countdown labels** (e.g. "Starts in 2 days")
 - **Dark/light theme** toggle
 - **Category-colored** cards and chips
-- **Animated** event cards and screen transitions
 
 ---
 
@@ -95,34 +93,28 @@ lib/
    flutter pub get
    ```
 
-3. **Generate platform files** (if `android/` or `ios/` folders are missing):
-   ```bash
-   flutter create .
-   ```
 
-4. **Run the app:**
+3. **Run the app:**
    ```bash
    flutter run
    ```
 
-5. **(Optional) Run analyzer:**
+4. **(Optional) Run analyzer:**
    ```bash
    flutter analyze
    ```
 
-> **Note:** Internet access is required to fetch events from JSONPlaceholder. Create/update/delete operations use the simulated API (changes may not persist server-side).
 
----
+
 
 ## Screenshots
 
-| Home Screen | Add Event | Dark Mode |
-|-------------|-----------|-----------|
-| *Add screenshot here* | *Add screenshot here* | *Add screenshot here* |
-
-| Event Card | Empty State | Delete Dialog |
-|------------|-------------|---------------|
-| *Add screenshot here* | *Add screenshot here* | *Add screenshot here* |
+![Home Screen](assets/display.jpg)
+![Edits Screen](assets/edits.jpg)
+![Display Snackbars](assets/snackbars.jpg)
+![deletes Screen](assets/delete.jpg)
+![Add Events Screen](assets/addNewEvent.jpg)
+![Updated Screen](assets/displayNewEvent.jpg)
 
 ---
 
